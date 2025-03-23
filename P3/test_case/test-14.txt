@@ -1,0 +1,54 @@
+CREATE AdventureRecords 4 bool int double string ready adventurePoints challengeLevel landmark
+GENERATE FOR AdventureRecords hash INDEX ON challengeLevel
+INSERT INTO AdventureRecords 12 ROWS
+true 117 -1.45 peak
+true 218 -2.18 valley
+false 101 -0.25 river
+true 209 -1.49 forest
+false 103 -1.52 mountain
+true 214 -2.63 canyon
+false 105 -1.10 cave
+false 108 -2.14 waterfall
+false 109 -2.83 glacier
+false 104 -2.32 desert
+true 215 -2.43 lake
+true 207 -1.91 hill
+PRINT FROM AdventureRecords 4 landmark challengeLevel adventurePoints ready WHERE challengeLevel > -99.9
+PRINT FROM AdventureRecords 4 landmark challengeLevel adventurePoints ready WHERE challengeLevel < 99.9
+PRINT FROM AdventureRecords 4 landmark challengeLevel adventurePoints ready WHERE challengeLevel = -3.2
+PRINT FROM AdventureRecords 4 landmark challengeLevel adventurePoints ready WHERE landmark > c
+PRINT FROM AdventureRecords 4 landmark challengeLevel adventurePoints ready WHERE landmark < c
+PRINT FROM AdventureRecords 4 landmark challengeLevel adventurePoints ready WHERE landmark = c
+GENERATE FOR AdventureRecords bst INDEX ON landmark
+INSERT INTO AdventureRecords 12 ROWS
+true 29 -4.32 tree
+true 31 -6.75 stone
+true 29 -5.55 path
+true 33 -7.24 sign
+true 30 -6.16 bridge
+true 34 -7.53 trail
+true 29 -5.41 gate
+true 32 -6.00 arch
+true 35 -7.29 ledge
+true 36 -7.91 beacon
+true 37 -7.05 spire
+true 38 -5.40 grove
+DELETE FROM AdventureRecords WHERE landmark > gate
+PRINT FROM AdventureRecords 4 landmark challengeLevel adventurePoints ready WHERE challengeLevel < 0.00
+DELETE FROM AdventureRecords WHERE landmark = stone
+PRINT FROM AdventureRecords 4 landmark challengeLevel adventurePoints ready WHERE challengeLevel < 0.01
+DELETE FROM AdventureRecords WHERE landmark < A
+PRINT FROM AdventureRecords 4 landmark challengeLevel adventurePoints ready WHERE challengeLevel < 0.02
+DELETE FROM AdventureRecords WHERE challengeLevel = -7.24
+PRINT FROM AdventureRecords 4 landmark challengeLevel adventurePoints ready WHERE challengeLevel < 0.01
+PRINT FROM AdventureRecords 4 landmark challengeLevel adventurePoints ready WHERE challengeLevel > -6.00
+PRINT FROM AdventureRecords 4 landmark challengeLevel adventurePoints ready WHERE challengeLevel < -6.00
+PRINT FROM AdventureRecords 4 landmark challengeLevel adventurePoints ready WHERE challengeLevel = -6.00
+PRINT FROM AdventureRecords 4 landmark challengeLevel adventurePoints ready WHERE landmark > lake
+PRINT FROM AdventureRecords 4 landmark challengeLevel adventurePoints ready WHERE landmark < lake
+PRINT FROM AdventureRecords 4 landmark challengeLevel adventurePoints ready WHERE landmark = lake
+DELETE FROM AdventureRecords WHERE challengeLevel > 6.00
+PRINT FROM AdventureRecords 4 landmark challengeLevel adventurePoints ready WHERE challengeLevel < -0.49
+DELETE FROM AdventureRecords WHERE challengeLevel < -6.00
+PRINT FROM AdventureRecords 4 landmark challengeLevel adventurePoints ready WHERE challengeLevel < 0.49
+QUIT

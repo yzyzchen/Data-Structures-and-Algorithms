@@ -1,0 +1,92 @@
+#Awesome Spec Example!
+CREATE 281class 4 int string string bool height emotion person Y/N
+GENERATE FOR 281class bst INDEX ON height
+INSERT INTO 281class 16 ROWS
+16 happy Darden true
+16 stressed students false
+15 busy office_hours true
+15 stressed students true
+14 stressed Paoletti true
+13 happy Darden true
+12 happy Sith true
+12 victorious Sith true
+9 happy Darden true
+9 stressed students false
+9 busy office_hours true
+8 stressed students true
+6 stressed Paoletti true
+5 happy Darden true
+4 happy Sith true
+4 victorious Sith true
+CREATE 280class 4 int string string bool height emotion person Y/N
+GENERATE FOR 280class bst INDEX ON height
+INSERT INTO 280class 16 ROWS
+16 happy Darden true
+16 stressed students false
+15 busy office_hours true
+15 stressed students true
+19 stressed Paoletti true
+13 happy Darden true
+12 happy Sith true
+12 victorious Sith true
+9 happy Darden true
+5 stressed students false
+9 busy office_hours true
+28 stressed students true
+27 stressed Paoletti true
+5 happy Darden true
+4 happy Sith true
+4 victorious Sith true
+GENERATE FOR 280class bst INDEX ON height
+JOIN 280class AND 281class WHERE height = height AND PRINT 3 person 2 emotion 2 person 1
+JOIN 281class AND 280class WHERE height = height AND PRINT 3 person 2 emotion 2 person 1
+GENERATE FOR 281class bst INDEX ON height
+JOIN 280class AND 281class WHERE height = height AND PRINT 3 person 2 emotion 2 person 1
+JOIN 281class AND 280class WHERE height = height AND PRINT 3 person 2 emotion 2 person 1
+DELETE FROM 281class WHERE person = Darden
+DELETE FROM 280class WHERE person = Darden
+INSERT INTO 281class 16 ROWS
+16 happy Darden true
+16 stressed students false
+15 busy office_hours true
+15 stressed students true
+19 stressed Paoletti true
+13 happy Darden true
+12 happy Sith true
+12 victorious Sith true
+9 happy Darden true
+5 stressed students false
+9 busy office_hours true
+28 stressed students true
+27 stressed Paoletti true
+5 happy Darden true
+4 happy Sith true
+4 victorious Sith true
+INSERT INTO 280class 16 ROWS
+16 happy Darden true
+16 stressed students false
+15 busy office_hours true
+15 stressed students true
+14 stressed Paoletti true
+13 happy Darden true
+12 happy Sith true
+12 victorious Sith true
+9 happy Darden true
+9 stressed students false
+9 busy office_hours true
+8 stressed students true
+6 stressed Paoletti true
+5 happy Darden true
+4 happy Sith true
+4 victorious Sith true
+JOIN 280class AND 281class WHERE height = height AND PRINT 3 person 2 emotion 2 person 1
+JOIN 281class AND 280class WHERE height = height AND PRINT 3 person 2 emotion 2 person 1
+PRINT FROM 281class 2 person emotion WHERE height = 5
+PRINT FROM 281class 2 person emotion WHERE height > 5
+PRINT FROM 281class 2 person emotion WHERE height < 5
+GENERATE FOR 281class hash INDEX ON height
+PRINT FROM 281class 2 person emotion WHERE height = 5
+PRINT FROM 281class 2 person emotion WHERE height > 5
+PRINT FROM 281class 2 person emotion WHERE height < 5
+REMOVE 281class
+QUIT

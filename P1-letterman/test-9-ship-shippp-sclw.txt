@@ -1,0 +1,11 @@
+S
+7
+// test can it insert 2 or delete 2
+ship
+sship
+ssship
+shipo
+shipoo
+shipop
+shippp
+

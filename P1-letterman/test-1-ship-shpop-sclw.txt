@@ -1,0 +1,6 @@
+S
+3
+//comments here(test upper case)
+ship
+shpop
+shopp

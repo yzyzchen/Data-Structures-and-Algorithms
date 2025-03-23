@@ -1,0 +1,32 @@
+CREATE ProjectTeams 4 string string bool double phase team approval rating
+INSERT INTO ProjectTeams 11 ROWS
+inspired Engineering true 75.43
+pressured Deadlines false 29.97
+busy Scheduling true 18.25
+determined Development true 55.38
+satisfied Resources true 102.47
+thrilled Engineering true 4444.44
+calm Planning true 255.65
+victorious Planning true 4.85
+reflective Planning true 17.95
+frustrated Planning true 8.66
+ambivalent Planning true  83.72
+DELETE FROM ProjectTeams WHERE rating > 4000
+DELETE FROM ProjectTeams WHERE rating < 4
+PRINT FROM ProjectTeams 2 team phase WHERE rating > 10
+GENERATE FOR ProjectTeams hash INDEX ON rating
+PRINT FROM ProjectTeams 2 team phase WHERE rating > 10
+PRINT FROM ProjectTeams 2 team phase WHERE rating = 10
+GENERATE FOR ProjectTeams bst INDEX ON rating
+PRINT FROM ProjectTeams 2 team phase WHERE rating > 90
+CREATE SeminarSeries 2 double string rating theme
+GENERATE FOR SeminarSeries hash INDEX ON rating
+INSERT INTO SeminarSeries 3 ROWS
+12 Pioneers
+7 Innovation
+88 Symposium
+PRINT FROM SeminarSeries 1 theme WHERE rating > 1
+JOIN SeminarSeries AND ProjectTeams ON rating = rating AND PRINT 2 theme 1 phase 2
+DELETE FROM ProjectTeams WHERE rating = 0
+JOIN SeminarSeries AND ProjectTeams ON rating = rating AND PRINT 2 theme 1 phase 2
+QUIT

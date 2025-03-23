@@ -1,0 +1,13 @@
+C
+10
+// test can it insert
+a
+ab
+cba
+cabd
+abcd
+abcde
+aaaaa
+aaaa
+aaa
+aa

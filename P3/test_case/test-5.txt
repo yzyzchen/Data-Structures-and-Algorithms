@@ -1,0 +1,61 @@
+CREATE table123 4 int double string bool intField doubleField stringField boolField
+CREATE table456 4 int double string bool intField doubleField stringField boolField
+GENERATE FOR table123 bst INDEX ON stringField
+GENERATE FOR table456 hash INDEX ON stringField
+INSERT INTO table123 6 ROWS
+8743 9.87 Z true
+7483 7.45 X true
+2938 8.52 Y false
+4839 6.38 W true
+3948 7.84 V false
+2384 8.96 U false
+INSERT INTO table456 5 ROWS
+6874 4.56 @ false
+9375 4.98 # true
+4857 4.83 $ false
+2738 4.71 % true
+6584 4.65 & false
+PRINT FROM table123 4 stringField intField stringField boolField WHERE stringField > M
+PRINT FROM table123 4 stringField intField stringField boolField WHERE stringField < N
+PRINT FROM table123 4 stringField intField stringField boolField WHERE stringField = L
+GENERATE FOR table123 hash INDEX ON stringField
+GENERATE FOR table456 bst INDEX ON stringField
+PRINT FROM table123 4 stringField intField stringField boolField WHERE stringField > *
+PRINT FROM table123 4 stringField intField stringField boolField WHERE stringField < *
+PRINT FROM table123 4 stringField intField stringField boolField WHERE stringField = *
+INSERT INTO table123 30 ROWS
+629 5.94 1 true
+328 5.76 2 false
+943 6.84 983 false
+132 6.91 764 true
+529 5.76 321 true
+821 5.94 852 false
+452 5.78 654 true
+763 5.97 543 false
+353 6.85 932 false
+654 5.97 645 true
+453 5.79 634 false
+352 5.96 21 true
+243 5.78 235 true
+253 5.94 52 false
+253 6.85 523 true
+256 5.94 532 false
+214 5.97 352 false
+425 5.94 557 true
+679 5.96 457 true
+684 6.83 4743 false
+474 5.94 412 true
+346 5.76 124 false
+646 5.94 900 true
+546 5.94 352 false
+234 5.76 51 true
+581 4.89 325 false
+784 5.76 325 true
+686 5.76 532 true
+581 4.89 235 false
+784 5.76 235 true
+JOIN table123 AND table456 WHERE doubleField = doubleField AND PRINT 4 intField 2 doubleField 2 stringField 2 boolField 1
+JOIN table456 AND table123 WHERE stringField = stringField AND PRINT 4 intField 2 doubleField 2 stringField 2 boolField 1
+JOIN table123 AND table456 WHERE boolField = boolField AND PRINT 4 intField 2 doubleField 2 stringField 2 boolField 1
+JOIN table456 AND table123 WHERE intField = intField AND PRINT 4 intField 2 doubleField 2 stringField 2 boolField 1
+QUIT

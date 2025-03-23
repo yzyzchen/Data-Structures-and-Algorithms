@@ -1,0 +1,6 @@
+C
+3
+// test can it insert 2 or delete 2
+l[abcd]t
+ld!c
+lcd

@@ -1,0 +1,34 @@
+CREATE table1 3 bool int string boolCol intCol stringCol
+CREATE table3 3 bool int string boolCol intCol stringCol
+INSERT INTO table1 3 ROWS
+false 5 itemA
+true 8 itemB
+false 11 itemC
+INSERT INTO table3 6 ROWS
+false 7 itemA
+true 9 itemB
+true 12 itemC
+true 13 itemD
+false 14 itemE
+false 16 itemF
+PRINT FROM table1 3 stringCol boolCol intCol WHERE boolCol = false
+PRINT FROM table3 3 stringCol boolCol intCol WHERE boolCol = true
+INSERT INTO table1 2 ROWS
+true 17 itemG
+false 20 itemH
+INSERT INTO table1 1 ROWS
+true 22 itemI
+PRINT FROM table1 3 intCol stringCol boolCol WHERE boolCol = true
+GENERATE FOR table1 hash INDEX ON stringCol
+GENERATE FOR table1 bst INDEX ON stringCol
+GENERATE FOR table3 bst INDEX ON intCol
+DELETE FROM table1 WHERE intCol < 10
+DELETE FROM table3 WHERE intCol < 10
+JOIN table1 AND table3 WHERE intCol = intCol AND PRINT 6 intCol 1 intCol 2 boolCol 1 boolCol 2 stringCol 1 stringCol 2
+GENERATE FOR table3 hash INDEX ON intCol
+JOIN table1 AND table3 WHERE intCol = intCol AND PRINT 6 intCol 1 intCol 2 boolCol 1 boolCol 2 stringCol 1 stringCol 2
+DELETE FROM table3 WHERE intCol < 15
+DELETE FROM table3 WHERE intCol > 20
+JOIN table1 AND table3 WHERE intCol = intCol AND PRINT 6 intCol 1 intCol 2 boolCol 1 boolCol 2 stringCol 1 stringCol 2
+JOIN table3 AND table1 WHERE intCol = intCol AND PRINT 6 intCol 1 intCol 2 boolCol 1 boolCol 2 stringCol 1 stringCol 2
+QUIT

@@ -1,0 +1,33 @@
+#
+#
+#
+#
+CREATE 281class 4 int string string bool height emotion person Y/N
+GENERATE FOR 281class bst INDEX ON height
+INSERT INTO 281class 16 ROWS
+16 happy Darden true
+16 stressed students false
+15 busy office_hours true
+15 stressed students true
+14 stressed Paoletti true
+13 happy Darden true
+12 happy Sith true
+12 victorious Sith true
+9 happy Darden true
+9 stressed students false
+9 busy office_hours true
+8 stressed students true
+6 stressed Paoletti true
+5 happy Darden true
+4 happy Sith true
+4 victorious Sith true
+#
+GENERATE FOR 281class hash INDEX ON height
+PRINT FROM 281class 2 height emotion ALL
+PRINT FROM 281class 2 height emotion WHERE height < 10
+DELETE FROM 281class WHERE height = 12
+PRINT FROM 281class 2 height emotion WHERE height < 10
+GENERATE FOR 281class hash INDEX ON Y/N
+DELETE FROM 281class WHERE Y/N = false
+REMOVE 281class
+QUIT

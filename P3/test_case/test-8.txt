@@ -1,0 +1,31 @@
+CREATE StudyGroups 4 string string bool double vibe location confirmed distance
+INSERT INTO StudyGroups 11 ROWS
+energetic Campus true 87.43
+overwhelmed Library false 22.58
+focused Seminar true 13.27
+overwhelmed Library true 62.14
+anxious Cafe true 88.607
+relieved Campus true 5555.55
+motivated Hall true 300.87
+successful Hall true 3.56
+disappointed Classroom true 15
+tired Classroom true  7.5
+uncertain Classroom true  90
+GENERATE FOR StudyGroups hash INDEX ON distance
+DELETE FROM StudyGroups WHERE distance > 15
+DELETE FROM StudyGroups WHERE distance > 14.99
+DELETE FROM StudyGroups WHERE distance > 0
+GENERATE FOR StudyGroups bst INDEX ON distance
+INSERT INTO StudyGroups 11 ROWS
+energetic Campus true 87.43
+overwhelmed Library false 22.58
+focused Seminar true 13.27
+overwhelmed Library true 62.14
+anxious Cafe true 88.607
+relieved Campus true 5555.55
+motivated Hall true 300.87
+successful Hall true 3.56
+disappointed Meeting true 15
+tired MeetingRoom true  10.5
+uncertain Office true  90
+QUIT

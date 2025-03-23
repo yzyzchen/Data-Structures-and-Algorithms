@@ -1,0 +1,42 @@
+#Awesome Spec Example!
+CREATE 281class 3 string string bool emotion person Y/N
+CREATE 280class 3 string string bool emotion person Y/N
+INSERT INTO 281class 8 ROWS
+happy Darden true
+stressed students false
+busy office_hours true
+stressed students true
+stressed Paoletti true
+happy Darden true
+happy Sith true
+victorious Sith true
+INSERT INTO 280class 8 ROWS
+A B true
+C Z true
+A K true
+A J false
+Z A true
+J A false
+K K true
+P Q false
+PRINT FROM 280class 2 person emotion WHERE Y/N = true
+PRINT FROM 281class 2 person emotion WHERE person > students
+DELETE FROM 281class WHERE person > Darden
+DELETE FROM 280class WHERE person = Darden
+GENERATE FOR 281class hash INDEX ON emotion
+GENERATE FOR 280class bst INDEX ON emotion
+GENERATE FOR 281class bst INDEX ON emotion
+INSERT INTO 280class 3 ROWS
+A B true
+C Z true
+A K true
+INSERT INTO 281class 3 ROWS
+happy Darden true
+stressed students false
+busy office_hours true
+PRINT FROM 281class 2 person emotion WHERE Y/N = true
+CREATE pets 3 string bool bool person likes_cats? likes_dogs?
+JOIN pets AND 281class WHERE person = person AND PRINT 6 person 1 emotion 2 likes_dogs? 1 person 2 likes_cats? 1 Y/N 2
+JOIN 280class AND 281class WHERE person = emotion AND PRINT 3 person 1 person 2 Y/N 1
+JOIN 280class AND 281class WHERE person = person AND PRINT 6 person 1 person 2 Y/N 1 Y/N 2 emotion 1 emotion 2
+QUIT

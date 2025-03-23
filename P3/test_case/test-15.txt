@@ -1,0 +1,20 @@
+CREATE ProductStats 3 int int int unitsSold costPerUnit profitPerUnit
+GENERATE FOR ProductStats bst INDEX ON profitPerUnit
+INSERT INTO ProductStats 7 ROWS
+15 20 25
+30 35 40
+45 50 55
+60 65 70
+75 80 85
+90 95 100
+105 110 115
+GENERATE FOR ProductStats bst INDEX ON unitsSold
+PRINT FROM ProductStats 3 unitsSold costPerUnit profitPerUnit WHERE profitPerUnit < 100
+DELETE FROM ProductStats WHERE profitPerUnit = 70
+PRINT FROM ProductStats 3 unitsSold costPerUnit profitPerUnit WHERE profitPerUnit < 100
+INSERT INTO ProductStats 2 ROWS
+120 125 130
+140 145 150
+DELETE FROM ProductStats WHERE unitsSold < 50
+PRINT FROM ProductStats 3 unitsSold costPerUnit profitPerUnit ALL
+QUIT
